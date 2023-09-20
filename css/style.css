@@ -1,9 +1,14 @@
 .uno{
     background-color: #510bd3;
     color:white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
 }
 
-#dos{
-    background-color: #d3440b;
-    color:white;
-}
+.dos {
+    background-color: #dbdbdb;
+    color: #6c6c6c;
+    padding: 10px;
+    border-radius: 10px;
+  }

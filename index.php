@@ -1,3 +1,29 @@
+
+<!--?php
+
+$color = '#000';
+$isColor = false;
+
+if(!$isColor){
+    $color = '#510bd3';
+} else {
+    $color = '#ff9300';
+
+}
+
+
+
+?>
+-->
+
+<?php 
+
+$isColor = true; 
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +33,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="uno">Hola mundo</h1>  
+    <!--<h1 style="background-color:?php echo $color ?>;" class="uno">Hola mundo</h1> -->
+    <?php if(!$isColor){ ?>
+    <h1 style="background-color:red;" class="uno">Hola mundo : FALSE</h1>
+    <?php 
+    } else {
+    ?>
+     <h1 style="background-color:green;" class="uno">Hola mundo : TRUE</h1>
+
+     <?php 
+    }
+    ?>
     <div class ="container">
     <div class ="dos">
         <ul>

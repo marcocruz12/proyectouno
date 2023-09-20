@@ -18,7 +18,16 @@ if(!$isColor){
 
 <?php 
 
-$isColor = true; 
+$isColor = false;
+
+$paises = array (
+    0 => "Canada",
+    1 => "Chile",
+    2 => "Mexico",
+    3 => "India",
+
+
+)
 
 ?>
 
@@ -46,11 +55,26 @@ $isColor = true;
     ?>
     <div class ="container">
     <div class ="dos">
-        <ul>
-            <li>Uno</li>
-            <li>Dos</li>
-            <li>Tres</li>
-        </ul>
+<table>
+    <tr>
+        <td>id</td>
+        <td>nombre</td>
+        <td>acciones</td>
+    </tr>
+    <?php 
+    foreach($paises as $index => $paises):
+    ?>
+    <tr>
+    <td><?php echo $index?></td>
+    <td><?php echo $paises?></td>
+    <td>
+        <button>Agregar</button>
+        <button>Eliminar</button>
+    </td>
+
+    </tr>
+    <?php endforeach; ?>
+</table>
     </div>
     <div class ="dos">
         <ul>

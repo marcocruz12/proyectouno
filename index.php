@@ -18,7 +18,7 @@ if(!$isColor){
 
 <?php 
 
-$isColor = false;
+$isColor = true;
 
 $paises = array (
     0 => "Canada",
@@ -55,28 +55,31 @@ $paises = array (
     ?>
     <div class ="container">
     <div class ="dos">
-<table>
+<table class="table table-striped">
+<thead class="thead-dark">
     <tr>
-        <td>id</td>
-        <td>nombre</td>
-        <td>acciones</td>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Acciones</th>
     </tr>
+    </thead>
     <?php 
     foreach($paises as $index => $paises):
     ?>
+     <tbody>
     <tr>
-    <td><?php echo $index?></td>
+    <th scope="row"><?php echo $index?></th>
     <td><?php echo $paises?></td>
     <td>
-        <button>Agregar</button>
-        <button>Eliminar</button>
+        <!-- <button type="button" class="btn btn-info" onclick=mostrarID(<?php echo $index ?>)>Ver ID</button> -->
+         <button type="button" class="btn btn-info alert-button" data-id="<?php echo $index ?>">Ver ID</button>
     </td>
 
     </tr>
     <?php endforeach; ?>
 </table>
     </div>
-    <div class ="dos">
+    <!--   <div class ="dos">
         <ul>
             <li>4</li>
             <li>5</li>
@@ -84,7 +87,7 @@ $paises = array (
         </ul>
     </div>
     <div class ="container2">
-    <div class ="tres">
+  <div class ="tres">
         <ul>
             <li>4</li>
             <li>5</li>
@@ -97,8 +100,10 @@ $paises = array (
             <li>5</li>
             <li>6</li>
         </ul>
-    </div></div>
+    </div></div> -->
 </div>
-    <!-- <script src="js/scripts.js"></script>-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 }
 
 .dos {
-    background-color: #dbdbdb;
+   /* background-color: #dbdbdb;*/
     color: #6c6c6c;
     padding: 10px;
     border-radius: 10px;
@@ -18,10 +18,26 @@
     color: #6c6c6c;
     padding: 10px;
     border-radius: 10px;
-    width: 40%;
+    /*width: 40%;*/
     margin: 20px;
   }
-.container2 {
+/* .container2 {
   display:flex;
   flex-wrap:wrap;
-}
+} */
+
+div.dos table tbody tr.primer td {
+    background-color: red;
+    padding: 10px;
+  }
+
+  /* table {
+    width: 100%;
+  } */
+
+  div.dos table tbody tr.primer td {
+    background-color: #4649ff;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 2px;
+  }

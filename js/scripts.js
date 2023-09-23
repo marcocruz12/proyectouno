@@ -26,7 +26,7 @@ function mostrarID(ID) {
 
   $('.btnjs').click(function(){
     Swal.fire({
-        title: '<strong>HTML <u>example</u></strong>',
+        title: '<strong>Tu ID es: </strong>',
         icon: 'info',
         html:
           'You can use <b>bold text</b>, ' +
@@ -47,10 +47,10 @@ function mostrarID(ID) {
  
  //Uso de onclick
 
- function mostrarJS() {
+ function mostrarJS(ID) {
   //console.log("id");
   Swal.fire({
-      title: 'Do you want to save the changes?',
+      title: 'Tu ID es: <strong>' + ID +'</strong>',
       showDenyButton: true,
       showCancelButton: true,
       confirmButtonText: 'Save',

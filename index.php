@@ -79,12 +79,9 @@ $paises = array (
          Ver ID
 </button>
 
-<button type="button" class="btn btn-success btnjs" id="btnjs">
-        ID JS
-</button>
 
-<button type="button" class="btn btn-warning" onclick="mostrarJS()">
-        ID JS2
+<button type="button" class="btn btn-warning" onclick="mostrarJS(<?php echo $index ?>)">
+        ID JS
 </button>
 
     </td>

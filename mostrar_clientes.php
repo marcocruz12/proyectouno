@@ -1,3 +1,19 @@
+<?php 
+var_dump($_POST);
+
+$nombre = 'No disponible';
+$apaterno = 'No disponible';
+
+if(isset($_POST['nombre']) && !empty($_POST['nombre'])) {
+$nombre = $_POST['nombre'];
+}   
+if(isset($_POST['apaterno']) && !empty($_POST['apaterno'])) {
+$apaterno = $_POST['apaterno'];
+}
+// var_dump($_POST);
+
+?>
+
 
 
 <!DOCTYPE html>
@@ -12,7 +28,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-3">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,23 +45,44 @@
 <div class="container  mt-5">
   <div class="row">
     <div class="col">
-      <h1>Bienvenidos</h1>
-    <form action="mostrar_clientes.php" method="POST">
 
+    <h1> Datos del cliente</h1>
+
+
+    
   <div class="form-group">
       <label for="name">Nombre:</label>
-      <input type="text" class="form-control" id="nombre" name="nombre" />
+      <input type="text" class="form-control" id="nombre" value="<?= $nombre ?>" disabled/>
   </div>
     
   <div class="form-group">
       <label for="apaterno">Apellido paterno:</label>
-      <input type="text" class="form-control" id="paterno" name="apaterno" />
+      <input type="text" class="form-control" id="paterno" value="<?= $apaterno ?>" disabled />
   </div>
 
-  <button type="submit" class="btn btn-primary" > Enviar</button>
-  
-  
-</form>
+
+    <!-- ?php 
+
+if($_POST) {
+
+        $nombre = $_POST['nombre'];
+        $apaterno = $_POST['apaterno'];
+
+    echo $nombre . ' ::: ' . $apaterno;
+    echo '<br/>';
+    // foreach($_POST as $data => $value){
+    //     echo $value . ' ';
+    //     }
+}   
+else {
+    echo 'No se ha encontrado nada';
+  }  
+
+// var_dump($_POST);
+
+ --
+
+?>
 
 
 

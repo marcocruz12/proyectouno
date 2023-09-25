@@ -52,8 +52,8 @@ $paises = array (
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="http://localhost/proyectouno/">Home </a>
-      <a class="nav-item nav-link" href="misitio.php">Tabla </a>
+      <a class="nav-item nav-link" href="http://localhost/proyectouno/">Login </a>
+      <a class="nav-item nav-link" href="misitio.php">Tablas</a>
     </div>
   </div>
 </nav>

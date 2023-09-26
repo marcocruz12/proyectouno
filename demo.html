@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo ocultar y mostrar un elemento con jQuery</title>
+</head>
+<body>
+  
+  <div id="capa" style="padding: 10px; background-color: #ff8800;">Pon el ratón encima de esta capa</div>
+  <br>
+  <div id="mensaje" >Has puesto el ratón encima!! <br>(Ahora quítalo de la capa)</div>
+  <div id="mensajedos" >Has puesto el ratón encima!! <br>(Ahora quítalo de la capa)</div>
+
+
+<button id = "enviar">Enviar</button>
+
+<button id = "enviardos">Enviar</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  
+  <script>
+
+    $("#capa").mouseenter(function (event) {
+     $("#mensaje").css("display", "none");
+     $("#mensajedos").css("display", "none");
+    });
+
+
+$('#enviar').click(function(){
+  $('#mensaje').css({
+   'font-size' : '19px',
+   'background-color' : '#fb9201',
+   'padding' : '15px'
+}) 
+});
+
+
+$('#enviardos').click(function(){
+$('#mensajedos').css({
+  'font-size' : '20px',
+  'background-color' : '#0180fb',
+  'border-radius' : '10px',
+  'color' : '#fff',
+  'margin-top' : '10px',
+  'margin-bottom' : '10px',
+  'padding' : '10px'
+})
+
+});
+
+
+
+
+  </script>
+
+  
+</body>
+</html>

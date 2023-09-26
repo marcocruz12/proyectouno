@@ -54,6 +54,7 @@ $paises = array (
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="http://localhost/proyectouno/">Login </a>
       <a class="nav-item nav-link" href="misitio.php">Tablas</a>
+      <a class="nav-item nav-link" href="http://localhost/proyectouno/clientes.php">Clientes</a>
     </div>
   </div>
 </nav>

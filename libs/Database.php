@@ -1,4 +1,5 @@
 <?php
+//Database.php
 //CONTROLADOR
 require 'Conexion.php';
 
@@ -12,30 +13,50 @@ public function __construct(){
 }
 
 
-    public function getClientes(){
+public function agregarCliente($nombre, $apaterno) {
+    try {
+        $conn = $this->conexion->conectar();
+        $query = "INSERT INTO cliente (nombre, apaterno) VALUES (:nombre, :apaterno)";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':nombre', $nombre);
+        $stmt->bindParam(':apaterno', $apaterno);
+        $stmt->execute();
 
-        try{
-            $conn = $this -> conexion-> conectar();
-            $query = "SELECT * FROM cliente;";
-            $stmt = $conn->prepare($query);
-            $stmt->execute();
-            $row = $stmt->fetchAll();
-            return $row;
-        }
-        catch(PDOException $e) {
-            echo $e;
-
-        }
+        return true;
+    } catch(PDOException $e) {
+        echo $e;
+        return false;
     }
+}
 
 
+public function getClientes(){
 
+    try{
+        $conn = $this -> conexion-> conectar();
+        $query = "SELECT * FROM cliente;";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $row = $stmt->fetchAll();
+        return $row;
+    }
+    catch(PDOException $e) {
+        echo $e;
 
-
+    }
+}
 
 
 
 }
+
+
+
+
+
+
+
+
 
 
 ?>
